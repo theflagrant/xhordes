@@ -20890,8 +20890,112 @@
                     if (wb[i] = b, wb[i].worth = b.w, wb[i].name = ya[b.u].name[b.t], wb[i].img = ya[b.u].type + "" + b.t + ".png", wb[i].classReqString = "", ya[b.u].class)
                         for (var e = 0; e < ya[b.u].class.length; ++e) wb[i].classReqString += t(ya[b.u].class[e] + (e < ya[b.u].class.length - 1 ? ", " : ""));
                     if (b.s) {
+//THE GREAT WALL OF LEGUSX
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+					//b is the item variable
+                    var swords = ["Wooden Sword","Rusty Ironsword", "Troll Blade", "Broadsword", "Longsword", "Carved Bonesword", "Greatsword", "Ghastly Scimitar", "Nullfire Sword", "Knight's Greatsword", "King's Glaive", "Void Blade", "Zerstörer","Hearteater", "Demonedge", "Excalibur", "Harbinger"]
+                    var swordmaxdmg = ["6","8","14","19","25","32","38","43","49","55","61","66","72","78","84","89","95"]
+                    var swordcrit = ["2.1","2.4","3.1","3.8","4.5","5.4","6.1","6.8","7.5","8.2","9","9.7","10.4","11.1","11.8","12.6","13.3"]
+                    var talismans = ["Smelly Talisman", "Guided Talisman", "Ocean Talisman", "Qui'ton", "Dimension Talisman"]
+                    var talimp = ["11", "35", "59", "83", "107"]
+                    var talimpregen = ["0.8", "2.8", "4.8", "6.8", "8.8"]
+                    var shields = ["Wooden Shield", "Buckler", "Old Bulwark", "Metal Guard", "Protecteron"]
+                    var shielddef = ["17", "31", "55", "91", "121"]
+                    var shieldhp = ["9", "13", "21", "33", "43"]
+                    var shieldhpregen = ["0.2", "0.8", "1.8", "3.3", "4.5"]
+                    var quivers = ["Linen Quiver", "Reinforced Quiver", "Last Reserves", "Lotharien", "Snake Quiver"]
+                    var quivercrit = ["0.9", "2.5", "4.1", "5.7", "7.3"]
+                    var quivermv = ["0.3", "0.9", "1.5", "2.1", "2.7"]
+                    var rings = ["Woven Band", "Ironbark Circlet", "Brass Ringlet", "Hollowed Bone", "Elven Band", "Imbued Circlet", "Arcane Ring", "Emerald Band", "Infernal Ring", "Ancient Talisman", "Hallowed Relic", "Cantor's Trinket", "Peacekeeper"]
+                    var ringhpregen = ["0.2", "0.4", "0.8", "1.3", "1.7", "2.2", "2.7", "3.2", "3.6", "4.1"]
+                    var ringmpregen = ["0.2", "0.4", "0.8", "1.3", "1.7", "2.2", "2.7", "3.2", "3.6", "4.1"]
+                    var boots = ["Sandals", "Cloth Footpads", "Leather Boots", "Bone Greaves", "Scaled Treads", "Patterned Greaves", "Wartorn Boots", "Imbued Treads", "Skyswift Boots", "Coldforged Greaves", "Cloudrunner Treads", "Boots of Hermes", "Starshard Greaves"]
+                    var bootdef = ["2", "4", "7", "9", "12", "15", "18", "21", "23", "26"]
+                    var boothp = ["3", "5", "8", "10", "13", "16", "19", "22", "24", "27"]
+                    var bootmv = ["0.1", "0.2", "0.4", "0.6", "0.8", "0.9", "1.2", "1.3", "1.5", "1.7"]
+                    var braclets = ["Simple Bracelet", "Makeshift Brace", "Leather Armlet", "Ivory Bracelet", "Iron Vambrace", "Imbued Bracers", "Ember Cuffs", "Mirrored Armlet", "Golem Fragment", "Coldforged Bracer", "Blackstar Gem", "Eternal Vambraces", "Lost Guardian"]
+                    var bracletdef = ["2", "5", "8", "12", "16", "19", "24", "27", "31", "34"]
+                    var braclethp = ["3", "5", "8", "11", "13", "16", "19", "22", "25", "27"]
+                    var bracletmp = ["6", "12", "21", "30", "39", "48", "59", "68", "77", "86"]
+                    var bracletmpregen = ["0.3", "0.6", "1", "1.5", "1.9", "2.4", "2.9", "3.4", "3.8", "4.3"]
+                    var gloves = ["Hand Wraps", "Cloth Mitts", "Leather Gloves", "Bone Grips", "Iron Gauntlets", "Imbued Gloves", "Wartorn Mitts", "Fiery Handguards", "Gloves of Empowerment ", "Coldforged Fists", "Eternal Gauntlets", "Gloves of Midas", "Titan's Mitts"]
+                    var glovedef = ["2", "4", "7", "10", "13", "15", "19", "21", "24", "27"]
+                    var glovecrit = ["0.3", "0.6", "1.1", "1.5", "2", "2.4", "3", "3.4", "3.9", "4.3"]
+                    var glovehp = ["3", "6", "10", "13", "17", "21", "25", "29", "32", "36"]
+                    var armor = ["Potato Sack", "Faded Garment", "Adventurer's Tunic", "Quilted Leather", "Scaled Chestguard", "Sky Cloak", "Shadow Cloak", "Obsidian Cloak", "Hellfire Cloak", "Soulkeeper", "Deathless"]
+                    var armordef = ["6", "13", "21", "29", "37", "46", "55", "64", "72", "80", "88"]
+                    var armorhp = ["11", "21", "32", "42", "53", "64", "77", "88", "99", "110", "120"]
+                    var armorhpregen = ["0.6", "1.4", "1.9", "2.3", "2.8", "3.3", "3.8", "4.2", "4.7", "5.1"]
+                    var bows = ["Driftwood Shortbow", "Novice Shortbow", "Curved Shortbow", "Adventurer's Shortbow", "Long Bow", "Bone Bow", "Elven Bow", "Ancient Bow", "Iron Piercer", "Silver Recurve", "Assassin's Bow", "Skyfire Warbow", "Hellfire Warbow", "Widowmaker", "Stormsong", "Scarebow", "Fury"]
+                    var bowmaxdmg = ["4", "9", "15", "21", "27", "34", "40", "46", "52", "57", "63", "69", "75", "81", "87", "93", "99"]
+                    var bowcrit = ["3.2", "3.9", "4.8", "5.7", "6.6", "7.7", "8.6", "9.5", "10.4", "11.3", "12.2", "13.1", "14", "14.9", "15.8", "16.7", "17.6"]
+                    var hammers = ["Splintered Club", "Wooden Mallet", "Rusty Flail", "Orcish Bludgeon", "Heavy Mace", "Iron Basher", "Darkmetal Maul", "Divine Gavel", "Hallowed Hammer", "Dwarfen Maul", "Coldforged Gavel", "Amboss", "Skullshatterer", "Benevolence ", "Hammer of Gaia", "Worldender", "Nightmare"]
+                    var hammermaxdmg = ["5", "8", "13", "18", "22", "28", "33", "38", "42", "47", "52", "57", "62", "66", "71", "76", "81"]
+                    var hammermpregen = ["1.1", "1.3", "1.6", "1.9", "2.2", "2.5", "2.8", "3.1", "3.4", "3.7", "4", "4.3", "4.6", "4.9", "5.2", "5.5", "5.8"]
+                    var staffs = ["Broken Twig", "Cracked Stick", "Gnarled Broomstick", "Oak Stave", "Mystic Wand", "Bone Stave", "Encrusted Rod", "Imbued Staff", "Emerald Staff", "Sapphire Staff", "Frozen Greatstaff", "Infernal Staff", "Hellfire Greatsaff", "Staff of Angelness ", "Crystal Core", "Witch's Heart", "Deathweaver"]
+                    var staffmaxdmg = ["4", "8", "16", "24", "32", "41", "49", "57", "65", "73", "81", "89", "97", "105", "113", "120", "128"]
+                    var staffcrit = ["2.1", "2.4", "3", "3.6", "4.2", "4.9", "5.5", "6.1", "6.7", "7.3", "7.9", "8.5", "9.1", "9.7", "10.3", "10.9", "11.5"]
+                    var staffmp = ["6", "8", "13", "18", "23", "28", "33", "38", "43", "47", "52", "57", "62", "67", "71", "76", "81"]
+                    var staffmpregen = ["0.6", "0.7", "1", "1.3", "1.6", "2", "2.3", "2.6", "2.9", "3.2", "3.5", "3.8", "4.1", "4.4", "4.7", "5", "5.3"]
+                    	var xItem = {}
+                        if (swords.includes(b.name)) {
+                          xItem.dmg = swordmaxdmg[swords.indexOf(b.name)]
+                          xItem.crit = swordcrit[swords.indexOf(b.name)]
+                        } else if (talismans.includes(b.name)) {
+                          xItem.mp = talimp[talismans.indexOf(b.name)]
+                          xItem.mpregen = talimpregen[talismans.indexOf(b.name)]
+                        } else if (shields.includes(b.name)) {  
+                          xItem.def = shielddef[shields.indexOf(b.name)]
+                          xItem.hp = shieldhp[shields.indexOf(b.name)]
+                          xItem.hpregen = shieldhpregen[shields.indexOf(b.name)]
+                        } else if (quivers.includes(b.name)) {  
+                          xItem.crit = quivercrit[quivers.indexOf(b.name)]
+                          xItem.mv = quivermv[quivers.indexOf(b.name)]
+                        } else if (rings.includes(b.name)) { 
+                          xItem.hpregen = ringhpregen[rings.indexOf(b.name)]
+                          xItem.mpregen = ringmpregen[rings.indexOf(b.name)]
+                        } else if (boots.includes(b.name)) { 
+                          xItem.def = bootdef[boots.indexOf(b.name)]
+                          xItem.hp = boothp[boots.indexOf(b.name)]
+                          xItem.mv = bootmv[boots.indexOf(b.name)]
+                        } else if (braclets.includes(b.name)) {
+                          xItem.def = bracletdef[braclets.indexOf(b.name)]
+                          xItem.hp = braclethp[braclets.indexOf(b.name)]
+                          xItem.mp = bracletmp[braclets.indexOf(b.name)]
+                          xItem.mpregen = bracletmpregen[braclets.indexOf(b.name)]
+                        } else if (gloves.includes(b.name)) {
+                          xItem.def = glovedef[gloves.indexOf(b.name)]
+                          xItem.crit = glovecrit[gloves.indexOf(b.name)]
+                          xItem.hp = glovehp[gloves.indexOf(b.name)]
+                        } else if (armor.includes(b.name)) {
+                          xItem.hp = armorhp[armor.indexOf(b.name)]
+                          xItem.def = armordef[armor.indexOf(b.name)]
+                          xItem.hpregen = armorhpregen[armor.indexOf(b.name)]
+                        } else if (bows.includes(b.name)) {
+                          xItem.dmg = bowmaxdmg[bows.indexOf(b.name)]
+                          xItem.crit = bowcrit[bows.indexOf(b.name)]
+                        } else if (hammers.includes(b.name)) {
+                          xItem.dmg = hammermaxdmg[hammers.indexOf(b.name)]
+                          xItem.mpregen = hammermpregen[hammers.indexOf(b.name)]
+                        } else if (staffs.includes(b.name)) {
+                          xItem.dmg = staffmaxdmg[staffs.indexOf(b.name)]
+                          xItem.crit = staffcrit[staffs.indexOf(b.name)]
+                          xItem.mp = staffmp[staffs.indexOf(b.name)]
+                          xItem.mpregen = staffmpregen[staffs.indexOf(b.name)]
+                        } else {
+                          xItem.dmg = "???"
+                          xItem.def = "???"
+                          xItem.hp = "???"
+                          xItem.hpregen = "???"
+                          xItem.mp = "???"
+                          xItem.mpregen = "???"
+                          xItem.crit = "???"
+                        }
                         var f = "";
-                        b.s.mindmg && b.s.maxdmg && (f += b.s.mindmg + " - " + b.s.maxdmg + " Damage<br>"), b.s.def && (f += b.s.def + " Defense<br>"), b.s.hp && (f += b.s.hp + " HP<br>"), b.s.hpreg && (f += b.s.hpreg + "/s HP Reg. <br>"), b.s.mp && (f += b.s.mp + " MP<br>"), b.s.mpreg && (f += b.s.mpreg + "/s MP Reg. <br>"), b.s.crit && (f += b.s.crit + "% Critical<br>"), b.s.move && (f += b.s.move + " Move speed<br>"), wb[i].statText = f
+                        b.s.mindmg && b.s.maxdmg && (f += b.s.mindmg + " - " + b.s.maxdmg + " Damage<br><span><em>Max: "+xItem.dmg+"</em></span>"), b.s.def && (f += b.s.def + " Defense<br><span><em>Max: "+xItem.def+"</em></span>"), b.s.hp && (f += b.s.hp + " HP<br><span><em>Max: "+xItem.hp+"</em></span>"), b.s.hpreg && (f += b.s.hpreg + "/s HP Reg. <br><span><em>Max: "+xItem.regen+"</em></span>"), b.s.mp && (f += b.s.mp + " MP<br><span><em>Max: "+xItem.mp+"</em></span>"), b.s.mpreg && (f += b.s.mpreg + "/s MP Reg. <br><span><em>Max: "+xItem.mpregen+"</em></span>"), b.s.crit && (f += b.s.crit + "% Critical<br><span><em>Max: "+xItem.crit+"%</em></span>"), b.s.move && (f += b.s.move + " Move speed<br><span><em>Max: "+xItem.mv+"</em></span>"), wb[i].statText = f
                     }
                     wb[i].minlvl = ya[b.u].lvl[b.t], wb[i].l && (xb[wb[i].l] = wb[i])
                 }
@@ -44005,52 +44109,13 @@
                     if (wb[i] = b, wb[i].worth = b.w, wb[i].name = ya[b.u].name[b.t], wb[i].img = ya[b.u].type + "" + b.t + ".png", wb[i].classReqString = "", ya[b.u].class)
                         for (var e = 0; e < ya[b.u].class.length; ++e) wb[i].classReqString += t(ya[b.u].class[e] + (e < ya[b.u].class.length - 1 ? ", " : ""));
                     if (b.s) {
-                        var f = "";
-                        b.s.mindmg && b.s.maxdmg && (f += b.s.mindmg + " - " + b.s.maxdmg + " Damage<br>"), b.s.def && (f += b.s.def + " Defense<br>"), b.s.hp && (f += b.s.hp + " HP<br>"), b.s.hpreg && (f += b.s.hpreg + "/s HP Reg. <br>"), b.s.mp && (f += b.s.mp + " MP<br>"), b.s.mpreg && (f += b.s.mpreg + "/s MP Reg. <br>"), b.s.crit && (f += b.s.crit + "% Critical<br>"), b.s.move && (f += b.s.move + " Move speed<br>"), wb[i].statText = f
-                    }
-                    wb[i].minlvl = ya[b.u].lvl[b.t], wb[i].l && (xb[wb[i].l] = wb[i])
-                }
-            }
-            Ib()
-        },
-        zb = function(a, b) {
-            void 0 !== xb[a] && void 0 === Db && (Db = xb[a], Eb.css("display", "block"), Eb.html($(b.firstChild).clone()))
-        },
-        Ab = function() {
-            Eb.css("display", "none"), Db = void 0
-        },
-        Bb = 21,
-        Cb = {},
-        Db = void 0,
-        Eb = void 0,
-        Fb = {},
-        Gb = function() {
-            Eb = $("#mouseItemDiv"), $(".uiclosebutton").click(function(a) {
-                $(this).parent().hide()
-            }), Cb = {}, window.addEventListener("mouseup", q, !1), Pb(document.getElementById("characterpanel")), Pb(document.getElementById("inventory"));
-            var a = $("#character-items");
-            a.html(""), xa.forEach(function(b) {
-                var c = $("<div/>");
-                Cb[b] = c, c.appendTo(a)
-            });
-            var b = $("#inventory-items");
-            b.html("");
-            for (var c = 0; c < Bb; ++c) {
-                var d = $("<div/>");
-                Cb[c] = d, d.appendTo(b)
-            }
-            for (c in Cb) Cb[c].mouseover({
-                slot: c
-            }, function(a) {
-                var b = xb[a.data.slot];
-                if (b) {
-                    var c = this.getBoundingClientRect();
-//THE GREAT WALL OF LEGUSX
+                        //THE GREAT WALL OF LEGUSX
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-					var swords = ["Wooden Sword","Rusty Ironsword", "Troll Blade", "Broadsword", "Longsword", "Carved Bonesword", "Greatsword", "Ghastly Scimitar", "Nullfire Sword", "Knight's Greatsword", "King's Glaive", "Void Blade", "Zerstörer","Hearteater", "Demonedge", "Excalibur", "Harbinger"]
+					//b is the item variable
+                    var swords = ["Wooden Sword","Rusty Ironsword", "Troll Blade", "Broadsword", "Longsword", "Carved Bonesword", "Greatsword", "Ghastly Scimitar", "Nullfire Sword", "Knight's Greatsword", "King's Glaive", "Void Blade", "Zerstörer","Hearteater", "Demonedge", "Excalibur", "Harbinger"]
                     var swordmaxdmg = ["6","8","14","19","25","32","38","43","49","55","61","66","72","78","84","89","95"]
                     var swordcrit = ["2.1","2.4","3.1","3.8","4.5","5.4","6.1","6.8","7.5","8.2","9","9.7","10.4","11.1","11.8","12.6","13.3"]
                     var talismans = ["Smelly Talisman", "Guided Talisman", "Ocean Talisman", "Qui'ton", "Dimension Talisman"]
@@ -44094,7 +44159,100 @@
                     var staffcrit = ["2.1", "2.4", "3", "3.6", "4.2", "4.9", "5.5", "6.1", "6.7", "7.3", "7.9", "8.5", "9.1", "9.7", "10.3", "10.9", "11.5"]
                     var staffmp = ["6", "8", "13", "18", "23", "28", "33", "38", "43", "47", "52", "57", "62", "67", "71", "76", "81"]
                     var staffmpregen = ["0.6", "0.7", "1", "1.3", "1.6", "2", "2.3", "2.6", "2.9", "3.2", "3.5", "3.8", "4.1", "4.4", "4.7", "5", "5.3"]
-                    //if (swords.includes(Jb.itemname.text(b.name))
+                    	var xItem = {}
+                        if (swords.includes(b.name)) {
+                          xItem.dmg = swordmaxdmg[swords.indexOf(b.name)]
+                          xItem.crit = swordcrit[swords.indexOf(b.name)]
+                        } else if (talismans.includes(b.name)) {
+                          xItem.mp = talimp[talismans.indexOf(b.name)]
+                          xItem.mpregen = talimpregen[talismans.indexOf(b.name)]
+                        } else if (shields.includes(b.name)) {  
+                          xItem.def = shielddef[shields.indexOf(b.name)]
+                          xItem.hp = shieldhp[shields.indexOf(b.name)]
+                          xItem.hpregen = shieldhpregen[shields.indexOf(b.name)]
+                        } else if (quivers.includes(b.name)) {  
+                          xItem.crit = quivercrit[quivers.indexOf(b.name)]
+                          xItem.mv = quivermv[quivers.indexOf(b.name)]
+                        } else if (rings.includes(b.name)) { 
+                          xItem.hpregen = ringhpregen[rings.indexOf(b.name)]
+                          xItem.mpregen = ringmpregen[rings.indexOf(b.name)]
+                        } else if (boots.includes(b.name)) { 
+                          xItem.def = bootdef[boots.indexOf(b.name)]
+                          xItem.hp = boothp[boots.indexOf(b.name)]
+                          xItem.mv = bootmv[boots.indexOf(b.name)]
+                        } else if (braclets.includes(b.name)) {
+                          xItem.def = bracletdef[braclets.indexOf(b.name)]
+                          xItem.hp = braclethp[braclets.indexOf(b.name)]
+                          xItem.mp = bracletmp[braclets.indexOf(b.name)]
+                          xItem.mpregen = bracletmpregen[braclets.indexOf(b.name)]
+                        } else if (gloves.includes(b.name)) {
+                          xItem.def = glovedef[gloves.indexOf(b.name)]
+                          xItem.crit = glovecrit[gloves.indexOf(b.name)]
+                          xItem.hp = glovehp[gloves.indexOf(b.name)]
+                        } else if (armor.includes(b.name)) {
+                          xItem.hp = armorhp[armor.indexOf(b.name)]
+                          xItem.def = armordef[armor.indexOf(b.name)]
+                          xItem.hpregen = armorhpregen[armor.indexOf(b.name)]
+                        } else if (bows.includes(b.name)) {
+                          xItem.dmg = bowmaxdmg[bows.indexOf(b.name)]
+                          xItem.crit = bowcrit[bows.indexOf(b.name)]
+                        } else if (hammers.includes(b.name)) {
+                          xItem.dmg = hammermaxdmg[hammers.indexOf(b.name)]
+                          xItem.mpregen = hammermpregen[hammers.indexOf(b.name)]
+                        } else if (staffs.includes(b.name)) {
+                          xItem.dmg = staffmaxdmg[staffs.indexOf(b.name)]
+                          xItem.crit = staffcrit[staffs.indexOf(b.name)]
+                          xItem.mp = staffmp[staffs.indexOf(b.name)]
+                          xItem.mpregen = staffmpregen[staffs.indexOf(b.name)]
+                        } else {
+                          xItem.dmg = "???"
+                          xItem.def = "???"
+                          xItem.hp = "???"
+                          xItem.hpregen = "???"
+                          xItem.mp = "???"
+                          xItem.mpregen = "???"
+                          xItem.crit = "???"
+                        }
+                        var f = "";
+                        b.s.mindmg && b.s.maxdmg && (f += b.s.mindmg + " - " + b.s.maxdmg + " Damage<br><span><em>Max: "+xItem.dmg+"</em></span>"), b.s.def && (f += b.s.def + " Defense<br><span><em>Max: "+xItem.def+"</em></span>"), b.s.hp && (f += b.s.hp + " HP<br><span><em>Max: "+xItem.hp+"</em></span>"), b.s.hpreg && (f += b.s.hpreg + "/s HP Reg. <br><span><em>Max: "+xItem.regen+"</em></span>"), b.s.mp && (f += b.s.mp + " MP<br><span><em>Max: "+xItem.mp+"</em></span>"), b.s.mpreg && (f += b.s.mpreg + "/s MP Reg. <br><span><em>Max: "+xItem.mpregen+"</em></span>"), b.s.crit && (f += b.s.crit + "% Critical<br><span><em>Max: "+xItem.crit+"%</em></span>"), b.s.move && (f += b.s.move + " Move speed<br><span><em>Max: "+xItem.mv+"</em></span>"), wb[i].statText = f
+                    }
+                    wb[i].minlvl = ya[b.u].lvl[b.t], wb[i].l && (xb[wb[i].l] = wb[i])
+                }
+            }
+            Ib()
+        },
+        zb = function(a, b) {
+            void 0 !== xb[a] && void 0 === Db && (Db = xb[a], Eb.css("display", "block"), Eb.html($(b.firstChild).clone()))
+        },
+        Ab = function() {
+            Eb.css("display", "none"), Db = void 0
+        },
+        Bb = 21,
+        Cb = {},
+        Db = void 0,
+        Eb = void 0,
+        Fb = {},
+        Gb = function() {
+            Eb = $("#mouseItemDiv"), $(".uiclosebutton").click(function(a) {
+                $(this).parent().hide()
+            }), Cb = {}, window.addEventListener("mouseup", q, !1), Pb(document.getElementById("characterpanel")), Pb(document.getElementById("inventory"));
+            var a = $("#character-items");
+            a.html(""), xa.forEach(function(b) {
+                var c = $("<div/>");
+                Cb[b] = c, c.appendTo(a)
+            });
+            var b = $("#inventory-items");
+            b.html("");
+            for (var c = 0; c < Bb; ++c) {
+                var d = $("<div/>");
+                Cb[c] = d, d.appendTo(b)
+            }
+            for (c in Cb) Cb[c].mouseover({
+                slot: c
+            }, function(a) {
+                var b = xb[a.data.slot];
+                if (b) {
+                    var c = this.getBoundingClientRect();
                     c.left < 200 ? (pb.css("left", c.left - 2), pb.css("right", "")) : (pb.css("right", za.width - c.left - 2), pb.css("left", "")), pb.css("bottom", za.height - c.top - 2), Jb.itemname.text(b.name), Jb.description.text(ya[b.u].description), b.statText+"hello world" ? (Jb.stats.html(b.statText), Jb.stats.css("display", "block")) : Jb.stats.css("display", "none"), Jb.requirements.html(""), Jb.requirements.append("<span class='" + (Ic.class.level >= b.minlvl ? "statReq" : "statReqMiss") + "'> Requires level " + b.minlvl + " </span>" + ("" != b.classReqString ? "<br><span class='" + (ya[b.u].class.indexOf(Ic.class.type) > -1 ? "statReq" : "statReqMiss") + "'> Class: " + b.classReqString + " </span>" : "") + "<h5 class='detailText'> Sells for " + b.worth + " <img src='data/coin.png' class='goldCoin'></h5>"), pb.css("display", "block")
                 } else pb.css("display", "none");
                 return !1
