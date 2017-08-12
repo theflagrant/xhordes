@@ -20929,6 +20929,7 @@
             }, function(a) {
                 var b = xb[a.data.slot];
                 if (b) {
+                  	alert(b.statText)
                     var c = this.getBoundingClientRect();
                     c.left < 200 ? (pb.css("left", c.left - 2), pb.css("right", "")) : (pb.css("right", za.width - c.left - 2), pb.css("left", "")), pb.css("bottom", za.height - c.top - 2), Jb.itemname.text(b.name), Jb.description.text(ya[b.u].description), b.statText ? (Jb.stats.html(b.statText), Jb.stats.css("display", "block")) : Jb.stats.css("display", "none"), Jb.requirements.html(""), Jb.requirements.append("<span class='" + (Ic.class.level >= b.minlvl ? "statReq" : "statReqMiss") + "'> Requires level " + b.minlvl + " </span>" + ("" != b.classReqString ? "<br><span class='" + (ya[b.u].class.indexOf(Ic.class.type) > -1 ? "statReq" : "statReqMiss") + "'> Class: " + b.classReqString + " </span>" : "") + "<h5 class='detailText'> Sells for " + b.worth + " <img src='data/coin.png' class='goldCoin'></h5>"), pb.css("display", "block")
                 } else pb.css("display", "none");
