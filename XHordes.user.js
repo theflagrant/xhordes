@@ -15,7 +15,7 @@ fetch("http://hordes.io/").then(res=>res.text()).then(res=>{
 var interval=setInterval(()=>{
     if (typeof document.body === "undefined" || document.body === null) return;
     var script = document.createElement("script");
-    script.src = "https://rawgit.com/BlazingFire007/xhordes/master/src/xhordes.min.js";
+    script.src = "https://rawgit.com/LegusX/xhordes/master/src/xhordes.min.js";
     script.dataType = "text/javascript";
     document.body.appendChild(script);
     clearInterval(interval);
