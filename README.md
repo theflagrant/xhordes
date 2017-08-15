@@ -37,3 +37,7 @@ Just reload the page and you'll be able to use XHordes once more!
 * Chat filtering
 * Mute/unmute commands
 * Other random fun stuff we make up along the way :D
+
+### Links n stuff
+The official XHordes Discord serverhttps://discord.gg/tCyTup3
+
