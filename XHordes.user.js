@@ -7,8 +7,17 @@
 // @match        http://hordes.io/*
 // @grant        GM_getValue
 // @grant        GM_setValue
+//@run-at document-start
 // ==/UserScript==
+fetch("http://hordes.io/").then(res=>res.text()).then(res=>{
+    document.documentElement.innerHTML = res.replace('<script src="script/dist.min.js"></script>', '');
+});
+var interval=setInterval(()=>{
+    if (typeof document.body === "undefined" || document.body === null) return;
     var script = document.createElement("script");
-    script.src = "https://drive.google.com/uc?export=download&id=0By1TAGAKPvu4Z01ZSEhfcHFUODQ";
+    if (typeof localStorage !== "undefined" && localStorage !== null && typeof localStorage.xhordes !== "string") fetch("https://rawgit.com/BlazingFire007/xhordes/master/src/xhordes.min.js").then(res=>res.text()).then(res=>{localStorage.xhordes = res;});
+    (localStorage.xhordes) ? script.innerHTML = localStorage.xhordes : script.src = "https://rawgit.com/BlazingFire007/xhordes/master/src/xhordes.min.js";
     script.dataType = "text/javascript";
     document.body.appendChild(script);
+    clearInterval(interval);
+}, 10);
