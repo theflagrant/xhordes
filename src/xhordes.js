@@ -1786,7 +1786,7 @@
                     }),
                     i = function() {
                         if (e) return !1;
-                        for (var b = pb || P(), c = Math.max(0, j.startTime + j.duration - b), d = c / j.duration || 0, f = 1 - d, g = 0, i = j.tweens.length; g < i; g++) j.tweens[g].run(f);
+                        for (var b = pb || P(), c = Math.max(0, j.startTime + j.duration - b), d = c / j.duration || 0, f = 1 - d, g = 0, i = j.neonates.length; g < i; g++) j.neonates[g].run(f);
                         return h.notifyWith(a, [j, f, c]), f < 1 && i ? c : (i || h.notifyWith(a, [j, 1, 0]), h.resolveWith(a, [j]), !1)
                     },
                     j = h.promise({
@@ -1800,16 +1800,16 @@
                         originalOptions: c,
                         startTime: pb || P(),
                         duration: c.duration,
-                        tweens: [],
+                        neonates: [],
                         createTween: function(b, c) {
-                            var d = pa.Tween(a, j.opts, b, c, j.opts.specialEasing[b] || j.opts.easing);
-                            return j.tweens.push(d), d
+                            var d = pa.Neonate(a, j.opts, b, c, j.opts.specialEasing[b] || j.opts.easing);
+                            return j.neonates.push(d), d
                         },
                         stop: function(b) {
                             var c = 0,
-                                d = b ? j.tweens.length : 0;
+                                d = b ? j.neonates.length : 0;
                             if (e) return this;
-                            for (e = !0; c < d; c++) j.tweens[c].run(1);
+                            for (e = !0; c < d; c++) j.neonates[c].run(1);
                             return b ? (h.notifyWith(a, [j, 1, 0]), h.resolveWith(a, [j, b])) : h.rejectWith(a, [j, b]), this
                         }
                     }),
@@ -3736,7 +3736,7 @@
                         return void 0 !== c ? pa.style(a, b, c) : pa.css(a, b)
                     }, a, b, arguments.length > 1)
                 }
-            }), pa.Tween = N, N.prototype = {
+            }), pa.Neonate = N, N.prototype = {
                 constructor: N,
                 init: function(a, b, c, d, e, f) {
                     this.elem = a, this.prop = c, this.easing = e || pa.easing._default, this.options = b, this.start = this.now = this.cur(), this.end = d, this.unit = f || (pa.cssNumber[c] ? "" : "px")
@@ -20896,7 +20896,7 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 					//b is the item variable
-                    var swords = ["Wooden Sword","Rusty Ironsword", "Troll Blade", "Broadsword", "Longsword", "Carved Bonesword", "Greatsword", "Ghastly Scimitar", "Nullfire Sword", "Knight's Greatsword", "King's Glaive", "Void Blade", "Zerstörer","Hearteater", "Demonedge", "Excalibur", "Harbinger"]
+                    var swords = ["Wooden Sword","Rusty Ironsword", "Troll Blade", "Broadsword ", "Longsword", "Carved Bonesword", "Greatsword", "Ghastly Scimitar", "Nullfire Sword", "Knight's Greatsword", "King's Glaive", "Void Blade", "Zerstörer","Hearteater", "Demonedge", "Excalibur", "Harbinger"]
                     var swordmaxdmg = ["4-6","5-8","9-14","12-19","16-25","21-32","24-38","28-43","32-49","36-55","40-61","43-66","47-72","51-78","55-84","58-89","62-95"]
                     var swordcrit = ["2.1","2.4","3.1","3.8","4.5","5.4","6.1","6.8","7.5","8.2","9","9.7","10.4","11.1","11.8","12.6","13.3"]
                     var talismans = ["Smelly Talisman", "Guided Talisman", "Ocean Talisman", "Qui'ton", "Dimension Talisman"]
@@ -20995,8 +20995,10 @@
                           xItem.crit = "???"
                         }
                         var f = "";
+						window.b = b;
+						window.xItem = xItem;
 						b.s.dmgtext = b.s.mindmg + "-" +b.s.maxdmg;
-                        b.s.mindmg && b.s.maxdmg && (f += "<span "+((b.s.maxdmg == xItem.dmg) ? 'style="color: #ffbd24;">' : ">") +b.s.mindmg + " - " + b.s.maxdmg + " Damage</span> <span><em>Max: "+xItem.dmg+"</em></span><br>"), b.s.def && (f += "<span "+((b.s.def == xItem.def) ? 'style="color: #ffbd24;">' : ">")+b.s.def + " Defense</span> <span><em>Max: "+xItem.def+"</em></span><br>"), b.s.hp && (f += "<span "+((b.s.hp == xItem.hp) ? "style='color: #ffbd24;'>" : ">")+b.s.hp + " HP</span> <span><em>Max: "+xItem.hp+"</em></span><br>"), b.s.hpreg && (f += "<span "+((b.s.hpreg == xItem.hpregen) ? 'style="color: #ffbd24;">' : ">")+b.s.hpreg + "/s HP Reg.</span> <span><em>Max: "+xItem.hpregen+"</em></span><br>"), b.s.mp && (f += "<span "+((b.s.mp == xItem.mp) ? 'style="color: #ffbd24;">' : ">")+b.s.mp + " MP</span> <span><em>Max: "+xItem.mp+"</em></span><br>"), b.s.mpreg && (f += "<span "+((b.s.mpreg == xItem.mpregen) ? 'style="color: #ffbd24;">' : ">")+b.s.mpreg + "/s MP Reg.</span> <span><em>Max: "+xItem.mpregen+"</em></span><br>"), b.s.crit && (f += "<span "+((b.s.crit == xItem.crit) ? 'style="color: #ffbd24;">' : ">")+b.s.crit + "% Critical</span> <span><em>Max: "+xItem.crit+"%</em></span><br>"), b.s.move && (f += "<span "+((b.s.move == xItem.mv) ? 'style="color: #ffbd24;">' : ">")+b.s.move + " Move speed</span> <span><em>Max: "+xItem.mv+"</em></span>"), wb[i].statText = f
+                        b.s.mindmg && b.s.maxdmg && (f += "<span "+((b.s.dmgtext == xItem.dmg) ? 'style="color: #ffbd24;">' : ">") +b.s.mindmg + " - " + b.s.maxdmg + " Damage</span> <span><em>Max: "+xItem.dmg+"</em></span><br>"), b.s.def && (f += "<span "+((b.s.def == xItem.def) ? 'style="color: #ffbd24;">' : ">")+b.s.def + " Defense</span> <span><em>Max: "+xItem.def+"</em></span><br>"), b.s.hp && (f += "<span "+((b.s.hp == xItem.hp) ? "style='color: #ffbd24;'>" : ">")+b.s.hp + " HP</span> <span><em>Max: "+xItem.hp+"</em></span><br>"), b.s.hpreg && (f += "<span "+((b.s.hpreg == xItem.hpregen) ? 'style="color: #ffbd24;">' : ">")+b.s.hpreg + "/s HP Reg.</span> <span><em>Max: "+xItem.hpregen+"</em></span><br>"), b.s.mp && (f += "<span "+((b.s.mp == xItem.mp) ? 'style="color: #ffbd24;">' : ">")+b.s.mp + " MP</span> <span><em>Max: "+xItem.mp+"</em></span><br>"), b.s.mpreg && (f += "<span "+((b.s.mpreg == xItem.mpregen) ? 'style="color: #ffbd24;">' : ">")+b.s.mpreg + "/s MP Reg.</span> <span><em>Max: "+xItem.mpregen+"</em></span><br>"), b.s.crit && (f += "<span "+((b.s.crit == xItem.crit) ? 'style="color: #ffbd24;">' : ">")+b.s.crit + "% Critical</span> <span><em>Max: "+xItem.crit+"%</em></span><br>"), b.s.move && (f += "<span "+((b.s.move == xItem.mv) ? 'style="color: #ffbd24;">' : ">")+b.s.move + " Move speed</span> <span><em>Max: "+xItem.mv+"</em></span>"), wb[i].statText = f
                     }
                     wb[i].minlvl = ya[b.u].lvl[b.t], wb[i].l && (xb[wb[i].l] = wb[i])
                 }
