@@ -2,21 +2,20 @@
 ## A modded version of the Hordes.io client to provide helpful features
 
 ### Installation
-Installation is relatively simple.
+Installation is incredibly simple.
 
-Depending on your browser (Chrome or Firefox) you'll either need to install [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en) for Google Chrome, or [Greasemonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/) for Mozilla Firefox as well as AdBlock Plus for [Chrome](https://chrome.google.com/webstore/detail/adblock-plus/cfhdojbkjhnklbpkdaibdccddilifddb?hl=en-US) or [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adblock-plus/?src=ss)
-
+Depending on your browser (Chrome or Firefox) you'll need to install Tampermonkey for either [Google Chrome](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en) or [Firefox](hhttps://addons.mozilla.org/en-US/firefox/addon/tampermonkey/), depending on your browser.
 
 Go ahead and click [here](https://github.com/LegusX/xhordes/raw/master/XHordes.user.js) to install XHordes. Your userscript manager should then prompt you about installing XHordes. If you accept it, the userscript manager should install XHordes.
-
-The last thing you need to do is to disable the original client code for Hordes so that XHordes can replace it. 
-1. click on the Adblock Plus icon which should have appeared in the extension bar of your browser. 
-2. Click on the button at the bottom that says "Options"
-3. Click on the tab "Add your own filters"
-4. In the text box type/paste in "hordes.io/script/dist.min.js" (without the quotes)
-5. Click "Add Filter"
-
 And you're done! You can now go to Hordes and check it out!
+
+### Disabling XHordes
+Should for whatever reason you want to temporarily disable XHordes, all you have to do is click on the Tampermonkey icon while on Hordes.io, then click on the little slider to set it to "off"
+After that, you can just reload the page to have Hordes X-free!
+
+### Re-enabling XHordes
+If you want to renable XHordes after previously disabling it, head to the Hordes website and just click on the Tampermonkey icon once more and click the slider again, so that it reads "on"
+Just reload the page and you'll be able to use XHordes once more!
 
 ### Current Features
 (Potentially Helpful [No guarantees though. :P])
