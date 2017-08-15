@@ -33,4 +33,7 @@ Just reload the page and you'll be able to use XHordes once more!
 * Chat commands (Muting and such)
 * Resize UI elements
 * Completely close UI elements
+* Token management
+* Chat filtering
+* Mute/unmute commands
 * Other random fun stuff we make up along the way :D
