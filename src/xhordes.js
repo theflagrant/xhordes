@@ -1403,7 +1403,7 @@
         if (!b) {
             var c = document.getElementsByTagName("body")[0],
                 d = document.createElement("div"),
-                e = document.createTextNode("MÃ‰q");
+                e = document.createTextNode("MÉq");
             d.appendChild(e), d.setAttribute("style", "font:" + a + ";position:absolute;top:0;left:0"), c.appendChild(d), b = d.offsetHeight, Pd[a] = b, c.removeChild(d)
         }
         return b
@@ -1786,7 +1786,7 @@
                     }),
                     i = function() {
                         if (e) return !1;
-                        for (var b = pb || P(), c = Math.max(0, j.startTime + j.duration - b), d = c / j.duration || 0, f = 1 - d, g = 0, i = j.tweens.length; g < i; g++) j.tweens[g].run(f);
+                        for (var b = pb || P(), c = Math.max(0, j.startTime + j.duration - b), d = c / j.duration || 0, f = 1 - d, g = 0, i = j.neonates.length; g < i; g++) j.neonates[g].run(f);
                         return h.notifyWith(a, [j, f, c]), f < 1 && i ? c : (i || h.notifyWith(a, [j, 1, 0]), h.resolveWith(a, [j]), !1)
                     },
                     j = h.promise({
@@ -1800,16 +1800,16 @@
                         originalOptions: c,
                         startTime: pb || P(),
                         duration: c.duration,
-                        tweens: [],
+                        neonates: [],
                         createTween: function(b, c) {
-                            var d = pa.Tween(a, j.opts, b, c, j.opts.specialEasing[b] || j.opts.easing);
-                            return j.tweens.push(d), d
+                            var d = pa.Neonate(a, j.opts, b, c, j.opts.specialEasing[b] || j.opts.easing);
+                            return j.neonates.push(d), d
                         },
                         stop: function(b) {
                             var c = 0,
-                                d = b ? j.tweens.length : 0;
+                                d = b ? j.neonates.length : 0;
                             if (e) return this;
-                            for (e = !0; c < d; c++) j.tweens[c].run(1);
+                            for (e = !0; c < d; c++) j.neonates[c].run(1);
                             return b ? (h.notifyWith(a, [j, 1, 0]), h.resolveWith(a, [j, b])) : h.rejectWith(a, [j, b]), this
                         }
                     }),
@@ -2369,7 +2369,7 @@
                     },
                     va = /([\0-\x1f\x7f]|^-?\d)|^-$|[^\0-\x1f\x7f-\uFFFF\w-]/g,
                     wa = function(a, b) {
-                        return b ? "\0" === a ? "ï¿½" : a.slice(0, -1) + "\\" + a.charCodeAt(a.length - 1).toString(16) + " " : "\\" + a
+                        return b ? "\0" === a ? "�" : a.slice(0, -1) + "\\" + a.charCodeAt(a.length - 1).toString(16) + " " : "\\" + a
                     },
                     xa = function() {
                         G()
@@ -3736,7 +3736,7 @@
                         return void 0 !== c ? pa.style(a, b, c) : pa.css(a, b)
                     }, a, b, arguments.length > 1)
                 }
-            }), pa.Tween = N, N.prototype = {
+            }), pa.Neonate = N, N.prototype = {
                 constructor: N,
                 init: function(a, b, c, d, e, f) {
                     this.elem = a, this.prop = c, this.easing = e || pa.easing._default, this.options = b, this.start = this.now = this.cur(), this.end = d, this.unit = f || (pa.cssNumber[c] ? "" : "px")
@@ -19684,7 +19684,7 @@
                 slot: "weapon",
                 type: "sword",
                 rotatedSprite: !0,
-                name: ["Wooden Sword", "Rusty Ironsword", "Troll Blade", "Broadsword ", "Longsword", "Carved Bonesword", "Greatsword", "Ghastly Scimitar", "Nullfire Sword", "Knight's Greatsword", "King's Glaive", "Void Blade", "ZerstÃ¶rer", "Hearteater", "Demonedge", "Excalibur", "Harbinger"],
+                name: ["Wooden Sword", "Rusty Ironsword", "Troll Blade", "Broadsword ", "Longsword", "Carved Bonesword", "Greatsword", "Ghastly Scimitar", "Nullfire Sword", "Knight's Greatsword", "King's Glaive", "Void Blade", "Zerstörer", "Hearteater", "Demonedge", "Excalibur", "Harbinger"],
                 drop: 1,
                 class: ["warrior"],
                 lvl: [1, 3, 9, 15, 21, 28, 34, 40, 46, 52, 58, 64, 70, 76, 82, 88, 94],
@@ -20896,7 +20896,7 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 					//b is the item variable
-                    var swords = ["Wooden Sword","Rusty Ironsword", "Troll Blade", "Broadsword", "Longsword", "Carved Bonesword", "Greatsword", "Ghastly Scimitar", "Nullfire Sword", "Knight's Greatsword", "King's Glaive", "Void Blade", "Zerstörer","Hearteater", "Demonedge", "Excalibur", "Harbinger"]
+                    var swords = ["Wooden Sword","Rusty Ironsword", "Troll Blade", "Broadsword", "Longsword", "Carved Bonesword", "Greatsword", "Ghastly Scimitar", "Nullfire Sword", "Knight's Greatsword", "King's Glaive", "Void Blade", "Zerst�rer","Hearteater", "Demonedge", "Excalibur", "Harbinger"]
                     var swordmaxdmg = ["4-6","5-8","9-14","12-19","16-25","21-32","24-38","28-43","32-49","36-55","40-61","43-66","47-72","51-78","55-84","58-89","62-95"]
                     var swordcrit = ["2.1","2.4","3.1","3.8","4.5","5.4","6.1","6.8","7.5","8.2","9","9.7","10.4","11.1","11.8","12.6","13.3"]
                     var talismans = ["Smelly Talisman", "Guided Talisman", "Ocean Talisman", "Qui'ton", "Dimension Talisman"]
