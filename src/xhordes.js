@@ -20463,20 +20463,20 @@
 				});
                 },
 			mute: function(a) {
-				Y({msg: `Muted ${a[0]} successfully!`, src:"system"});
+				Y({msg: "Muted "+a.join(' ')+" successfully!", src:"system"});
 				typeof window.muted==="undefined"?window.muted=[a.join(' ')]:window.muted.push(a.join(' '));
 				localStorage.muted = window.muted.join("&");
 			},
 			unmute: function(a) {
-				let m='';
+				var m='';
 				window.muted.indexOf(a.join(' '))===-1?m='Could not find '+a.join(' '):m='Successfully unmuted '+a.join(' ');
 				Y({msg: m, src: 'system'});
-				window.muted=window.muted.filter(i=>i!==a.join(' '));
+				window.muted=window.muted.filter(function(i){i!==a.join(' ')});
 				localStorage.muted = window.muted.join("&");
 			},
 			mutelist: function(a) {
-                Y({msg: window.muted||"Nobody is muted!", src: 'system'})
-            },
+				Y({msg: window.muted||"Nobody is muted!", src: 'system'})
+			},
             hideui: function() {
                 pc("hide")
             },
