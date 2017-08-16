@@ -22,6 +22,8 @@ Just reload the page and you'll be able to use XHordes once more!
 
 * Display item stat maxes
 * Change color of stats that are maxed out
+* Mute/unmute commands
+* Mention highlighting.
 
 ### Planned Features
 * Minimap
@@ -35,7 +37,6 @@ Just reload the page and you'll be able to use XHordes once more!
 * Completely close UI elements
 * Token management
 * Chat filtering
-* Mute/unmute commands
 * Other random fun stuff we make up along the way :D
 
 ### Links n stuff
