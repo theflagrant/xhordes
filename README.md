@@ -22,11 +22,6 @@ Just reload the page and you'll be able to use XHordes once more!
 
 * Display item stat maxes
 * Change color of stats that are maxed out
-* Muting people
-  * `/mute <name of user to mute>` 
-  * `/unmute <name of user to unmute>`
-  * `/mutelist` Returns the list of people who have been muted by you.
-  * Please note, all names for muting are case sensitive
 
 ### Planned Features
 * Minimap
@@ -44,5 +39,5 @@ Just reload the page and you'll be able to use XHordes once more!
 * Other random fun stuff we make up along the way :D
 
 ### Links n stuff
-The official XHordes Discord server https://discord.gg/tCyTup3
+The official XHordes Discord serverhttps://discord.gg/tCyTup3
 
