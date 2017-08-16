@@ -1329,6 +1329,7 @@
                 case "global":
                     if (!va(Pa.get("chat-chat"))) return;
                     if (c += " chatmsg-global", 0 === a.r && (c += " unreg"), !a.name) return !1;
+					if(typeof window.muted!=="undefined"&&!!~window.muted.indexOf(a.name)) return;
                     b = "[" + a.name + "]: " + b;
                     break;
                 case "gm":
@@ -20417,6 +20418,7 @@
                 if (b.length <= 0) return !1;
                 var c = b.shift().substring(1),
                     d = a.substring(1);
+				if(typeof localStorage.muted==="string")window.muted=localStorage.muted.split("&");
                 Ra.hasOwnProperty(c) ? Ra[c](b, d) : Y({
                     msg: "Unknown command: " + c,
                     src: "system"
@@ -20458,7 +20460,22 @@
                 for (k in Na) Y({
                     msg: k + ": " + Pa.get(k),
                     src: "system"
-                })
+				});
+                },
+			mute: function(a) {
+				Y({msg: `Muted ${a[0]} successfully!`, src:"system"});
+				typeof window.muted==="undefined"?window.muted=[a.join(' ')]:window.muted.push(a.join(' '));
+				localStorage.muted = window.muted.join("&");
+			},
+			unmute: function(a) {
+				let m='';
+				window.muted.indexOf(a.join(' '))===-1?m='Could not find '+a.join(' '):m='Successfully unmuted '+a.join(' ');
+				Y({msg: m, src: 'system'});
+				window.muted=window.muted.filter(i=>i!==a.join(' '));
+				localStorage.muted = window.muted.join("&");
+			},
+			mutelist: function(a) {
+                Y({msg: window.muted||"Nobody is muted!", src: 'system'})
             },
             hideui: function() {
                 pc("hide")
