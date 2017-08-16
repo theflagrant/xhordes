@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         XHordes
 // @namespace    http://tampermonkey.net/
-// @version      0.3
+// @version      0.4
 // @description  A modded version of the Hordes.io client
 // @author       LegusX
 // @match        http://hordes.io/
