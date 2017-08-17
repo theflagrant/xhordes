@@ -20271,135 +20271,155 @@
             }, La()
         },
         La = function() {
-            Aa.reset(), Aa.simple_combo(Pa.get("toggleHelp"), function() {
-                $("#modal-help").modal("toggle")
-            }), Aa.register_combo({
-                keys: Pa.get("nextAlly"),
-                on_keydown: function() {
-                    Ic && td && (Ic.target = td)
-                }
-            }), Aa.register_combo({
-                keys: Pa.get("nextTarget"),
-                on_keydown: function() {
-                    Ic && sd && (Ic.target = sd)
-                }
-            }), Aa.register_combo({
-                keys: Pa.get("walkForward"),
-                on_keydown: function() {
-                    Ga = !0
-                },
-                on_release: function() {
-                    Ga = !1
-                }
-            }), Aa.register_combo({
-                keys: Pa.get("walkBackward"),
-                on_keydown: function() {
-                    Ha = !0
-                },
-                on_release: function() {
-                    Ha = !1
-                }
-            }), Aa.register_combo({
-                keys: Pa.get("walkRight"),
-                on_keydown: function() {
-                    Fa = !0
-                },
-                on_release: function() {
-                    Fa = !1
-                }
-            }), Aa.register_combo({
-                keys: Pa.get("walkLeft"),
-                on_keydown: function() {
-                    Ea = !0
-                },
-                on_release: function() {
-                    Ea = !1
-                }
-            }), Aa.register_combo({
-                keys: Pa.get("turnLeft"),
-                on_keydown: function() {
-                    Ja = !0
-                },
-                on_release: function() {
-                    Ja = !1
-                }
-            }), Aa.register_combo({
-                keys: Pa.get("turnRight"),
-                on_keydown: function() {
-                    Ia = !0
-                },
-                on_release: function() {
-                    Ia = !1
-                }
-            }), Aa.register_combo({
-                keys: Pa.get("walkForward2"),
-                on_keydown: function() {
-                    Ga = !0
-                },
-                on_release: function() {
-                    Ga = !1
-                }
-            }), Aa.register_combo({
-                keys: Pa.get("walkBackward2"),
-                on_keydown: function() {
-                    Ha = !0
-                },
-                on_release: function() {
-                    Ha = !1
-                }
-            }), Aa.register_combo({
-                keys: Pa.get("inventory"),
-                prevent_default: !1,
-                on_release: function() {
-                    Ic && $("#inventory").toggle()
-                }
-            }), Aa.register_combo({
-                keys: Pa.get("character"),
-                prevent_default: !1,
-                on_release: function() {
-                    Ic && $("#characterpanel").toggle()
-                }
-            }), Aa.simple_combo(Pa.get("skill1"), function() {
-                Ic && Ic.useSkill(1)
-            }), Aa.simple_combo(Pa.get("skill2"), function() {
-                Ic && Ic.useSkill(2)
-            }), Aa.simple_combo(Pa.get("skill3"), function() {
-                Ic && Ic.useSkill(3)
-            }), Aa.simple_combo(Pa.get("skill4"), function() {
-                Ic && Ic.useSkill(4)
-            }), Aa.simple_combo("enter", function() {
-                if (cc.chatboxWrapper) {
-                    Tb.unLock();
-                    var a = Math.round(cc.chatboxWrapper[0].scrollHeight - cc.chatboxWrapper[0].scrollTop) === Math.round(cc.chatboxWrapper[0].clientHeight);
-                    $("#chatInputForm").show(), $("#chatInput").focus(), a && cc.chatboxWrapper.scrollTop(cc.chatboxWrapper[0].scrollHeight)
-                }
-            }), $("#skillButtonKbd1").html(Pa.get("skill1")), $("#skillButtonKbd2").html(Pa.get("skill2")), $("#skillButtonKbd3").html(Pa.get("skill3")), $("#skillButtonKbd4").html(Pa.get("skill4"))
-        },
-        Ma = !1;
-    if ("undefined" != typeof Storage) try {
-        x = "__storage_test__", localStorage.setItem(x, x), localStorage.removeItem(x), Ma = !0, console.log("Webstorage found. loading settings..")
-    } catch (a) {
-        console.log("Error: Webstorage not working.")
-    } else console.log("Error: Webstorage not working.");
-    var Na = {
-            skill1: "1",
-            skill2: "2",
-            skill3: "3",
-            skill4: "4",
-            nextTarget: "tab",
-            nextAlly: "shift",
-            walkForward: "w",
-            walkLeft: "a",
-            walkRight: "d",
-            walkBackward: "s",
-            turnLeft: "left",
-            turnRight: "right",
-            walkForward2: "up",
-            walkBackward2: "down",
-            toggleHelp: "f1",
-            inventory: "b",
-            character: "c"
-        },
+					Aa.reset(), Aa.simple_combo(Pa.get("toggleHelp"), function() {
+						$(".modal-help").replaceWith('<div class="modal fade in" id="modal-help" tabindex="-1" role="dialog" style="display: block;"><div class="modal-dialog modal-body-base modal-help" role="document"><div class="modal-content"><div class="modal-body"><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button><h4><div class="sys-icon icon-help iconpanelmod"></div> Help</h4><div><h5>Controls <small>Can be changed with /rebind</small></h5><table class="table controltable"><tbody><tr><td><kbd>W A S D</kbd></td><td class="td-help"> Move around</td></tr><tr><td><kbd>1 2 3 4</kbd></td><td class="td-help"> Use skills on current target</td></tr><tr><td><kbd>B</kbd></td><td class="td-help"> Inventory</td></tr><tr><td><kbd>C</kbd></td><td class="td-help"> Character Panel</td></tr><tr><td><kbd>Left mouse</kbd></td><td class="td-help"> Select a target / Rotate camera</td></tr><tr><td><kbd>Right mouse</kbd></td><td class="td-help"> Look around</td></tr><tr><td><kbd>Tab</kbd></td><td class="td-help"> Next target</td></tr><tr><td><kbd>Shift</kbd></td><td class="td-help"> Next ally</td></tr><tr><td><kbd>F1</kbd></td><td class="td-help"> Toggle help</td></tr><tr><td style = "background-color: #FFCE44"><kbd>X</kbd></td><td class="td-help" style = "background-color: #FFCE44"> Show the XHORDES keys</td></tr></tbody></table><h5>Chat Commands <small>Type into chat to activate</small></h5><table class="table controltable"><tbody><tr><td><kbd>/bindings</kbd></td><td class="td-help"> Show list of current bindings</td></tr><tr><td><kbd>/rebind</kbd></td><td class="td-help"> Change the binding of a key</td></tr><tr><td><kbd>/resetbindings</kbd></td><td class="td-help"> Reset all bindings to default</td></tr><tr><td><kbd>/respawn</kbd></td><td class="td-help"> Suicide and go back to spawn</td></tr></tbody></table></div></div></div></div>')
+						$("#modal-help").modal("toggle");
+					}), Aa.simple_combo(Pa.get("toggleLegusHelp"), function() {
+						$(".modal-help").replaceWith('<div class="modal fade in" id="modal-help" tabindex="-1" role="dialog" style="display: block;"><div class="modal-dialog modal-body-base modal-help" role="document"><div class="modal-content"><div class="modal-body"><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button><h4><div class="sys-icon icon-help iconpanelmod"></div> XHORDES Help</h4><div><h5>Controls <small>Can be changed with /rebind</small></h5><table class="table controltable"><tbody><tr><td style = "background-color: #757575"><kbd>F1</kbd></td><td class="td-help" style = "background-color: #757575"> Toggle Regular Help</td></tr><tr><td><kbd>G</kbd></td><td class="td-help"> Select Global Chat</td></tr><tr><td><kbd>H</kbd></td><td class="td-help"> Select Clan Chat</td></tr><tr><td><kbd>F2</kbd></td><td class="td-help"> Hide/Show the Chat</td></tr><tr><td><kbd>F3</kbd></td><td class="td-help"> Hide/Show the Leaderboard</td></tr></tbody></table><h5>Chat Commands <small>Type into chat to activate</small></h5><table class="table controltable"><tbody><tr><td><kbd>/mute [player]</kbd></td><td class="td-help"> Mutes a player (case-sensitive!)</td></tr><tr><td><kbd>/unmute [player]</kbd></td><td class="td-help"> Unmutes a player (case-sensitive!)</td></tr><tr><td><kbd>/mutelist</kbd></td><td class="td-help"> Lists all the people you have muted</td></tr></tbody></table></div></div></div></div>')
+						$("#modal-help").modal("toggle");
+					}),	Aa.simple_combo(Pa.get("toggleChat"), function() {
+						$("#chatbox").toggle()
+					}),	Aa.simple_combo(Pa.get("toggleLb"), function() {
+						$("#ladder-body").toggle();
+						$("#statistics").toggle();
+					}), Aa.simple_combo(Pa.get("globalChat"), function() {
+						$("#chatChannelName").text("Global"), hc = "g";
+						$("#chatInputForm").show(), $("#chatInput").focus(), a && cc.chatboxWrapper.scrollTop(cc.chatboxWrapper[0].scrollHeight)
+					}), Aa.simple_combo(Pa.get("clanChat"), function() {
+						$("#chatChannelName").text("Clan"), hc = "c";
+						$("#chatInputForm").show(), $("#chatInput").focus(), a && cc.chatboxWrapper.scrollTop(cc.chatboxWrapper[0].scrollHeight)
+					}), Aa.register_combo({
+						keys: Pa.get("nextAlly"),
+						on_keydown: function() {
+							Ic && td && (Ic.target = td)
+						}
+					}), Aa.register_combo({
+						keys: Pa.get("nextTarget"),
+						on_keydown: function() {
+							Ic && sd && (Ic.target = sd)
+						}
+					}), Aa.register_combo({
+						keys: Pa.get("walkForward"),
+						on_keydown: function() {
+							Ga = !0
+						},
+						on_release: function() {
+							Ga = !1
+						}
+					}), Aa.register_combo({
+						keys: Pa.get("walkBackward"),
+						on_keydown: function() {
+							Ha = !0
+						},
+						on_release: function() {
+							Ha = !1
+						}
+					}), Aa.register_combo({
+						keys: Pa.get("walkRight"),
+						on_keydown: function() {
+							Fa = !0
+						},
+						on_release: function() {
+							Fa = !1
+						}
+					}), Aa.register_combo({
+						keys: Pa.get("walkLeft"),
+						on_keydown: function() {
+							Ea = !0
+						},
+						on_release: function() {
+							Ea = !1
+						}
+					}), Aa.register_combo({
+						keys: Pa.get("turnLeft"),
+						on_keydown: function() {
+							Ja = !0
+						},
+						on_release: function() {
+							Ja = !1
+						}
+					}), Aa.register_combo({
+						keys: Pa.get("turnRight"),
+						on_keydown: function() {
+							Ia = !0
+						},
+						on_release: function() {
+							Ia = !1
+						}
+					}), Aa.register_combo({
+						keys: Pa.get("walkForward2"),
+						on_keydown: function() {
+							Ga = !0
+						},
+						on_release: function() {
+							Ga = !1
+						}
+					}), Aa.register_combo({
+						keys: Pa.get("walkBackward2"),
+						on_keydown: function() {
+							Ha = !0
+						},
+						on_release: function() {
+							Ha = !1
+						}
+					}), Aa.register_combo({
+						keys: Pa.get("inventory"),
+						prevent_default: !1,
+						on_release: function() {
+							Ic && $("#inventory").toggle()
+						}
+					}), Aa.register_combo({
+						keys: Pa.get("character"),
+						prevent_default: !1,
+						on_release: function() {
+							Ic && $("#characterpanel").toggle()
+						}
+					}), Aa.simple_combo(Pa.get("skill1"), function() {
+						Ic && Ic.useSkill(1)
+					}), Aa.simple_combo(Pa.get("skill2"), function() {
+						Ic && Ic.useSkill(2)
+					}), Aa.simple_combo(Pa.get("skill3"), function() {
+						Ic && Ic.useSkill(3)
+					}), Aa.simple_combo(Pa.get("skill4"), function() {
+						Ic && Ic.useSkill(4)
+					}), Aa.simple_combo("enter", function() {
+						if (cc.chatboxWrapper) {
+							Tb.unLock();
+							var a = Math.round(cc.chatboxWrapper[0].scrollHeight - cc.chatboxWrapper[0].scrollTop) === Math.round(cc.chatboxWrapper[0].clientHeight);
+							$("#chatInputForm").show(), $("#chatInput").focus(), a && cc.chatboxWrapper.scrollTop(cc.chatboxWrapper[0].scrollHeight)
+						}
+					}), $("#skillButtonKbd1").html(Pa.get("skill1")), $("#skillButtonKbd2").html(Pa.get("skill2")), $("#skillButtonKbd3").html(Pa.get("skill3")), $("#skillButtonKbd4").html(Pa.get("skill4"))
+				},
+				Ma = !1;
+			if ("undefined" != typeof Storage) try {
+				x = "__storage_test__", localStorage.setItem(x, x), localStorage.removeItem(x), Ma = !0, console.log("Webstorage found. loading settings..")
+			} catch (a) {
+				console.log("Error: Webstorage not working.")
+			} else console.log("Error: Webstorage not working.");
+			var Na = {
+					skill1: "1",
+					skill2: "2",
+					skill3: "3",
+					skill4: "4",
+					nextTarget: "tab",
+					nextAlly: "shift",
+					walkForward: "w",
+					walkLeft: "a",
+					walkRight: "d",
+					walkBackward: "s",
+					turnLeft: "left",
+					turnRight: "right",
+					walkForward2: "up",
+					walkBackward2: "down",
+					toggleHelp: "f1",
+					toggleChat: "f2",
+					globalChat: "g",
+					clanChat: "h",
+					toggleLb: "f3",
+					toggleLegusHelp: "x",
+					inventory: "b",
+					character: "c"
+				},
         Oa = function() {
             this.get = function(a) {
                 return this.hasOwnProperty(a) ? this[a] : void 0
