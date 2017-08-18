@@ -40,5 +40,5 @@ Just reload the page and you'll be able to use XHordes once more!
 * Other random fun stuff we make up along the way :D
 
 ### Links n stuff
-The official XHordes Discord serverhttps://discord.gg/tCyTup3
+The official XHordes Discord server: https://discord.gg/tCyTup3
 
