@@ -358,7 +358,7 @@ body {
 /* SCROLLBAR */
 
 ::-webkit-scrollbar-track {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(214, 8, 173, 0.75);
     border-radius: 4px;
 }
 
@@ -368,7 +368,7 @@ body {
 
 ::-webkit-scrollbar-thumb {
     border-radius: 4px;
-    background-color: #FFFFFF;
+    background-color: #000;
 }
 
 
@@ -433,13 +433,13 @@ body {
 .mpbarbg {
     height: 16px;
     position: relative;
-    background-color: #394545;
+    background-color: #07565f;
     margin-top: 3px;
 }
 
 .mpbar {
     width: 75%;
-    background-color: #0d84c5;
+    background-color: #0ea6b7;
 }
 
 .manafont {
@@ -460,13 +460,13 @@ body {
 }
 
 .targetlevel {
-    color: #999;
+    color: #000;
     text-align: right;
     order: 2;
 }
 
 .targethealthtext {
-    color: #FAF5EF;
+    color: #000;
     text-align: right;
     position: absolute;
     right: 0px;
