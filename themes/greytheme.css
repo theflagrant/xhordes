@@ -296,7 +296,6 @@ body {
     overflow-wrap: break-word;
     order: 1;
     flex-grow: 1;
-    background-color: rgba(25, 22, 22, 0.3);
 }
 
 #chatSettingWrapper {
@@ -340,7 +339,7 @@ body {
     cursor: auto;
     padding-left: 5px;
     padding-right: 5px;
-    background color: rgba(25, 22, 22, 0.3);
+    
 }
 
 #chatInput {
@@ -359,17 +358,18 @@ body {
 /* SCROLLBAR */
 
 ::-webkit-scrollbar-track {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(25, 22, 22, 0.3);
     border-radius: 4px;
 }
 
 ::-webkit-scrollbar {
     width: 8px;
+    background-color: (25, 22, 22, 0.3);
 }
 
 ::-webkit-scrollbar-thumb {
     border-radius: 4px;
-    background-color: #867c7c;
+    background-color: rgba(25, 22, 22, 0.3);
 }
 
 
@@ -526,7 +526,7 @@ body {
 }
 
 .skillDescription {
-    color: #235C22;
+    color: #000000;
     margin: 0 0 5px 0;
     font-size: 90%;
 }
@@ -572,8 +572,7 @@ body {
 }
 
 .chatmsg-global {
-    color: #424242;
-    background-color: rgba(255, 255, 255, 0.5);
+    color: #000011;
     border-radius: 3px;
     padding: 3px;
 }
@@ -613,7 +612,7 @@ body {
 }
 
 .unreg {
-    color: #797979;
+    color: #193144;
 }
 
 
