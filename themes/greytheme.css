@@ -105,7 +105,7 @@ body {
     position: absolute;
     top: 5px;
     right: 5px;
-    color: rgba(242, 255, 0, 0.94);
+    color: #FF0;
     font-weight: bold;
     font-size: 20px;
     text-align: right;
@@ -124,7 +124,7 @@ body {
 }
 
 .skillOverlayDisable {
-    background: rgba(82, 72, 72, 0.8);
+    background: rgba(80, 80, 80, 0.8);
 }
 
 .skillLvlUpButton {
@@ -190,7 +190,7 @@ body {
     left: 5px;
     right: 5px;
     bottom: 5px;
-    margin: 0px;1
+    margin: 0px;
 }
 
 #expbar {
@@ -280,7 +280,7 @@ body {
 /* chat window */
 
 #chatbox {
-    background: rgba(25, 22, 22, 0.3);
+    background-color: rgba(25, 22, 22, 0.3);
     min-width: 400px;
     width: 100%;
     padding: 5px;
@@ -296,6 +296,7 @@ body {
     overflow-wrap: break-word;
     order: 1;
     flex-grow: 1;
+    background-color: rgba(25, 22, 22, 0.3);
 }
 
 #chatSettingWrapper {
@@ -306,7 +307,7 @@ body {
 .chatsettingbutton,
 .chatsettingbutton:hover {
     border-style: none;
-    background-color: #e8e8e8;
+    background-color: #fff;
     padding: 1px 5px;
     color: #777;
     border-radius: 3px;
@@ -339,6 +340,7 @@ body {
     cursor: auto;
     padding-left: 5px;
     padding-right: 5px;
+    background color: rgba(25, 22, 22, 0.3);
 }
 
 #chatInput {
@@ -400,7 +402,6 @@ body {
     bottom: 20px;
     left: 0px;
     margin: 5px;
-    background-color:aliceblue
 }
 
 
@@ -428,7 +429,7 @@ body {
 
 .hpbar {
     width: 75%;
-    background-color: #57C347;
+    background-color: #76e067;
 }
 
 .mpbarbg {
@@ -440,7 +441,7 @@ body {
 
 .mpbar {
     width: 75%;
-    background-color: #0d84c5;
+    background-color: #4db4d1;
 }
 
 .manafont {
@@ -461,7 +462,7 @@ body {
 }
 
 .targetlevel {
-    color: #171717;
+    color: #999;
     text-align: right;
     order: 2;
 }
@@ -496,7 +497,7 @@ body {
     font-weight: 700;
     margin: 5px 0 0 0;
     font-weight: 700;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255,255,255,0.5);
     border-radius: 4px;
     float: right;
     padding: 0 5px 0 5px;
@@ -515,6 +516,7 @@ body {
     padding: 5px 5px 5px 8px;
     min-width: 220px;
     max-width: 350px;
+    background-color: rgba(25, 22, 22, 0.6);
 }
 
 .skillName {
@@ -555,7 +557,7 @@ body {
 }
 
 .chatmsg-exp {
-    color: #435CDC;
+    color: #e28d0d;
 }
 
 .chatmsg-player {
@@ -591,12 +593,19 @@ body {
     padding: 3px;
 }
 
+.chatmsg-mention {
+    color: #ff450c;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    padding: 3px;
+}
+
 .chatmsg-pk {
     color: #EE0054;
 }
 
 .factionA {
-    color: #193f71;
+    color: #134E9E;
 }
 
 .factionB {
@@ -756,7 +765,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     display: none;
-    background-color:rgba(25, 22, 22, 0.3);
+    background-color: rgba(25, 22, 22, 0.3);
 }
 
 #sharebuttons {
@@ -812,7 +821,7 @@ body {
 .item {
     width: 40px;
     height: 40px;
-    background-color: #5f5454;
+    background-color: #757575;
     border-radius: 7px;
     padding: 1px;
     margin: 1px;
@@ -834,7 +843,7 @@ body {
 }
 
 .item:hover {
-    box-shadow: inset 0 0 10px #5a6365;
+    box-shadow: inset 0 0 10px #c5f8ff;
 }
 
 .itemPic {
@@ -862,7 +871,7 @@ body {
     border-radius: 7px;
     margin: 1px;
     position: relative;
-    border: 3px solid rgba(0, 0, 0, 0.5);
+    border: 3px solid rgba(173, 170, 170, 0.5);
     background-repeat: no-repeat;
     background-size: 80%;
     background-position: center;
@@ -901,7 +910,6 @@ body {
     top: 88px;
     position: absolute;
     background-color: rgba(25, 22, 22, 0.3);
-
     border-radius: 5px;
     padding: 5px;
 }
@@ -949,55 +957,55 @@ body {
 
 
 .slot_glove {
-    background-image: url("data/slots/glove.png");
+    background-image: url("http://hordes.io/data/slots/glove.png");
     left:0%;
 }
 
 .slot_armlet {
-    background-image: url("data/slots/armlet.png");
+    background-image: url("http://hordes.io/data/slots/armlet.png");
     left:0%;
     top:42px;
 }
 
 .slot_boot {
-    background-image: url("data/slots/boot.png");
+    background-image: url("http://hordes.io/data/slots/boot.png");
     left:0%;
     top:84px;
 }
 
 .slot_gem {
-    background-image: url("data/slots/gem.png");
+    background-image: url("http://hordes.io/data/slots/gem.png");
     right:0%;
 }
 
 .slot_ring {
-    background-image: url("data/slots/ring.png");
+    background-image: url("http://hordes.io/data/slots/ring.png");
     right:0%;
     top:42px;
 }
 
 .slot_bag {
-    background-image: url("data/slots/bag.png");
+    background-image: url("http://hordes.io/data/slots/bag.png");
     right:0%;
     top:84px;
 }
 
 .slot_weapon {
-    background-image: url("data/slots/weapon.png");
+    background-image: url("http://hordes.io/data/slots/weapon.png");
     right: 50%;
     top: 130px;
     transform: translateX(-22px);
 }
 
 .slot_offhand {
-    background-image: url("data/slots/offhand.png");
+    background-image: url("http://hordes.io/data/slots/offhand.png");
     right: 50%;
     transform: translateX(62px);
     top: 130px;
 }
 
 .slot_armor {
-    background-image: url("data/slots/armor.png");
+    background-image: url("http://hordes.io/data/slots/armor.png");
     right: 50%;
     transform: translateX(50%);
     top: 130px;
@@ -1063,23 +1071,26 @@ body {
     height:20px;
 }
 .icon-bag{
-    background-image: url("data/icons/bag.png");
+    background-image: url("http://hordes.io/data/icons/bag.png");
 }
 .icon-char{
-    background-image: url("data/icons/char.png");
+    background-image: url("http://hordes.io/data/icons/char.png");
     background-position-y: 0px 
 }
 .icon-id{
-    background-image: url("data/icons/id.png");
+    background-image: url("http://hordes.io/data/icons/id.png");
 }
 .icon-settings{
-    background-image: url("data/icons/settings.png");
+    background-image: url("http://hordes.io/data/icons/settings.png");
 }
 .icon-help{
-    background-image: url("data/icons/help.png");
+    background-image: url("http://hordes.io/data/icons/help.png");
 }
 .icon-clan{
-    background-image: url("data/icons/horde.png");
+    background-image: url("http://hordes.io/data/icons/horde.png");
+}
+.icon-discord{
+	background-image: url("http://i.imgur.com/L6HyDbt.png");
 }
 .iconpanelmod {
     float: left;
@@ -1089,7 +1100,7 @@ body {
 #trader {
     width:350px;
     position:absolute;
-    background-color: rgba(58, 54, 54, 0.33);
+    background-color: rgba(25, 22, 22, 0.3);
     border-radius: 5px;
     padding: 5px;
 
@@ -1174,4 +1185,3 @@ body {
 .btmlink{
     margin: 0 10px;
 }
-
