@@ -281,10 +281,10 @@ body {
 
 #chatbox {
     background-color: rgba(25, 22, 22, 0.3);
-    min-width: 400px;
-    width: 100%;
+    min-width: 20px;
+    width: 70%;
     padding: 5px;
-    height: 200px;
+    height: 300px;
     display: flex;
     flex-direction: column-reverse;
 }
@@ -306,7 +306,7 @@ body {
 .chatsettingbutton,
 .chatsettingbutton:hover {
     border-style: none;
-    background-color: #fff;
+    background-color: rgba(25, 22, 22, 0.3);
     padding: 1px 5px;
     color: #777;
     border-radius: 3px;
@@ -317,8 +317,8 @@ body {
 
 .chatsettingdisable,
 .chatsettingdisable:hover {
-    background-color: rgba(255, 255, 255, 0.42);
-    color: rgb(142, 142, 142);
+    background-color: #e23846;
+    color: #000000;
 }
 
 .chatsettingdisable:active,
@@ -387,6 +387,7 @@ body {
     bottom: 20px;
     right: 0px;
     margin: 5px;
+    color: #5069e5;
 }
 
 #upperRightContainer {
@@ -497,7 +498,7 @@ body {
     font-weight: 700;
     margin: 5px 0 0 0;
     font-weight: 700;
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(27,23,23,0);
     border-radius: 4px;
     float: right;
     padding: 0 5px 0 5px;
@@ -541,11 +542,11 @@ body {
 /* general colors */
 
 .ally {
-    color: #253F28;
+    color: #55cc77;
 }
 
 .enemy {
-    color: #922222;
+    color: #db4346;
 }
 
 .chatmsg-system {
@@ -579,14 +580,14 @@ body {
 
 .chatmsg-clan {
     color: #0088ff;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(27, 22, 22, 0.5);
     border-radius: 3px;
     padding: 3px;
 }
 
 
 .chatmsg-w {
-    color: #0CD4E0;
+    color: #ea273b;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 3px;
     padding: 3px;
@@ -604,11 +605,12 @@ body {
 }
 
 .factionA {
-    color: #134E9E;
+    color: #11b4d8;
+    
 }
 
 .factionB {
-    color: #931212;
+    color: #ea273b;
 }
 
 .unreg {
