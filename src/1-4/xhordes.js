@@ -44,6 +44,7 @@
 		                          var val = controller.buttons[i];
 		                          var pressed = val == 1.0;
 		                          if (!pressed) return
+		                          alert(layout[String(i)])
 		                          window.keypress.dispatchEvent(new KeyboardEvent("keydown", {
 		                              key: layout[String(i)]
 		                          }));
@@ -54,24 +55,28 @@
 		                        var a = axes[i];
 		                        switch(i){
 		                        case 0: {
+		                            alert(a<0 ? "LeftArrow" : "RightArrow")
 		                            window.keypress.dispatchEvent(new KeyboardEvent("keydown", {
 		                                key: a<0 ? "LeftArrow" : "RightArrow"
 		                            }));
 		                            break;
 		                        }
 		                        case 1: {
+		                            alert(a<0 ? "UpArrow" : "DownArrow")
 		                            window.keypress.dispatchEvent(new KeyboardEvent("keydown", {
 		                                key: a<0 ? "UpArrow" : "DownArrow"
 		                            }))
 		                            break;
 		                        }
 		                        case 2: {
+		                            alert(a<0 ? "LeftArrow" : "RightArrow")
 		                            window.keypress.dispatchEvent(new KeyboardEvent("keydown", {
 		                                key: a<0 ? "LeftArrow" : "RightArrow"
 		                            }))
 		                            break;
 		                        }
 		                        case 3: {
+		                            alert(a<0 ? "UpArrow" : "DownArrow")
 		                            window.keypress.dispatchEvent(new KeyboardEvent("keydown", {
 		                                key: a<0 ? "UpArrow" : "DownArrow"
 		                            }))
