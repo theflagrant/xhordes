@@ -17,6 +17,9 @@
 		            "7": "e",
 		            "8": "c",
 		            "9": "b",
+		            "10":"5",
+		            "11":"6",
+		            "12":"7",
 		            "13": "UpArrow",
 		            "14": "DownArrow",
 		            "15": "LeftArrow",
@@ -41,7 +44,7 @@
 		                          var val = controller.buttons[i];
 		                          var pressed = val == 1.0;
 		                          if (!pressed) return
-		                          window.dispatchEvent(new KeyboardEvent("keydown", {
+		                          window.keypress.dispatchEvent(new KeyboardEvent("keydown", {
 		                              key: layout[String(i)]
 		                          }));
 		                    }
@@ -51,25 +54,25 @@
 		                        var a = axes[i];
 		                        switch(i){
 		                        case 0: {
-		                            window.dispatchEvent(new KeyboardEvent("keydown", {
+		                            window.keypress.dispatchEvent(new KeyboardEvent("keydown", {
 		                                key: a<0 ? "LeftArrow" : "RightArrow"
 		                            }));
 		                            break;
 		                        }
 		                        case 1: {
-		                            window.dispatchEvent(new KeyboardEvent("keydown", {
+		                            window.keypress.dispatchEvent(new KeyboardEvent("keydown", {
 		                                key: a<0 ? "UpArrow" : "DownArrow"
 		                            }))
 		                            break;
 		                        }
 		                        case 2: {
-		                            window.dispatchEvent(new KeyboardEvent("keydown", {
+		                            window.keypress.dispatchEvent(new KeyboardEvent("keydown", {
 		                                key: a<0 ? "LeftArrow" : "RightArrow"
 		                            }))
 		                            break;
 		                        }
 		                        case 3: {
-		                            window.dispatchEvent(new KeyboardEvent("keydown", {
+		                            window.keypress.dispatchEvent(new KeyboardEvent("keydown", {
 		                                key: a<0 ? "UpArrow" : "DownArrow"
 		                            }))
 		                            break;
