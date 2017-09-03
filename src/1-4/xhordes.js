@@ -91,6 +91,7 @@
 
 		            function addgamepad(gamepad) {
 		                controllers[gamepad.index] = gamepad;
+		                alert("Gamepad detected!")
 		                requestAnimationFrame(updateStatus);
 		            }
 
