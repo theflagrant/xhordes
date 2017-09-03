@@ -1,6 +1,9 @@
 		! function(b, c) {
 		    //Code for gamepad detection and updating
 		    (function(window) {
+		        var requestAnimationFrame = window.mozRequestAnimationFrame ||
+                    window.webkitRequestAnimationFrame ||
+                    window.requestAnimationFrame;
 		        var connected = 'ongamepadconnected' in window;
 		        var controllers = {}
 		        var layout = {
