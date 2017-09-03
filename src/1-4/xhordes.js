@@ -41,9 +41,9 @@
 		                          var val = controller.buttons[i];
 		                          var pressed = val == 1.0;
 		                          if (!pressed) return
-		                          var buttonEvent = new KeyboardEvent("keydown", {
+		                          window.dispatchEvent(new KeyboardEvent("keydown", {
 		                              key: layout[String(i)]
-		                          })
+		                          }));
 		                    }
 
 		                    var axes = d.getElementsByClassName("axis");
@@ -51,27 +51,27 @@
 		                        var a = axes[i];
 		                        switch(i){
 		                        case 0: {
-		                            var axesEvent = new KeyboardEvent("keydown", {
+		                            window.dispatchEvent(new KeyboardEvent("keydown", {
 		                                key: a<0 ? "LeftArrow" : "RightArrow"
-		                            });
+		                            }));
 		                            break;
 		                        }
 		                        case 1: {
-		                            var axesEvent = new KeyboardEvent("keydown", {
+		                            window.dispatchEvent(new KeyboardEvent("keydown", {
 		                                key: a<0 ? "UpArrow" : "DownArrow"
-		                            });
+		                            }))
 		                            break;
 		                        }
 		                        case 2: {
-		                            var axesEvent = new KeyboardEvent("keydown", {
+		                            window.dispatchEvent(new KeyboardEvent("keydown", {
 		                                key: a<0 ? "LeftArrow" : "RightArrow"
-		                            });
+		                            }))
 		                            break;
 		                        }
 		                        case 3: {
-		                            var axesEvent = new KeyboardEvent("keydown", {
+		                            window.dispatchEvent(new KeyboardEvent("keydown", {
 		                                key: a<0 ? "UpArrow" : "DownArrow"
-		                            });
+		                            }))
 		                            break;
 		                        }
 		                        }
