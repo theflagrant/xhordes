@@ -1,12 +1,7 @@
 		! function(b, c) {
 		    //Code for gamepad detection and updating
 		    (function(window) {
-		        var requestAnimationFrame = window.mozRequestAnimationFrame ||
-                    window.webkitRequestAnimationFrame ||
-                    window.requestAnimationFrame;
-		        var connected = 'ongamepadconnected' in window;
-		        var controllers = {}
-		        var $ = jQuery
+		      //  var $ = jQuery
 		        var layout = {
 		            "0": "1",
 		            "1": "2",
@@ -26,90 +21,13 @@
 		            "15": "LeftArrow",
 		            "16": "RightArrow",
 		        }
-                    function connecthandler(e) {
-                        addgamepad(e.gamepad);
-                    }
-		            function updateStatus() {
-		                if (!connected) {
-		                    scangamepads();
-		                }
-
-		                var i = 0;
-		                var j;
-
-		                for (j in controllers) {
-		                    var controller = controllers[j];
-
-		                    for (i = 0; i < controller.buttons.length; i++) {
-		                          var b = buttons[i];
-		                          var val = controller.buttons[i];
-		                          var pressed = val == 1.0;
-		                          if (!pressed) return
-		                          //console.log(layout[String(i)])
-		                          $("window").trigger($.Event("keydown", {key:layout[String(i)]}))
-		                    }
-
-		                    var axes = d.getElementsByClassName("axis");
-		                    for (i = 0; i < controller.axes.length; i++) {
-		                        var a = axes[i];
-		                        switch(i){
-		                        case 0: {
-		                          //  console.log(a<0 ? "LeftArrow" : "RightArrow")
-		                            $("window").trigger($.Event("keydown", {key:a<0 ? "LeftArrow" : "RightArrow"}))
-		                            break;
-		                        }
-		                        case 1: {
-		                          //  console.log(a<0 ? "UpArrow" : "DownArrow")
-		                            $("window").trigger($.Event("keydown", {key:a<0 ? "UpArrow" : "DownArrow"}))
-		                            break;
-		                        }
-		                        case 2: {
-		                          //  console.log(a<0 ? "LeftArrow" : "RightArrow")
-		                            $("window").trigger($.Event("keydown", {key:a<0 ? "LeftArrow" : "RightArrow"}))
-		                            break;
-		                        }
-		                        case 3: {
-		                          //  console.log(a<0 ? "UpArrow" : "DownArrow")
-		                            $("window").trigger($.Event("keydown", {key:a<0 ? "UpArrow" : "DownArrow"}))
-		                            break;
-		                        }
-		                        }
-		                    }
-		                }
-
-		                requestAnimationFrame(updateStatus);
-		            }
-
-		            function addgamepad(gamepad) {
-		                controllers[gamepad.index] = gamepad;
-		              //  console.log("Gamepad detected!")
-		                requestAnimationFrame(updateStatus);
-		            }
-
-		            function scangamepads() {
-		                var gamepads = navigator.getGamepads ? navigator.getGamepads() : (navigator.webkitGetGamepads ? navigator.webkitGetGamepads() : []);
-		                for (var i = 0; i < gamepads.length; i++) {
-		                    if (gamepads[i]) {
-		                        if (gamepads[i].index in controllers) {
-		                            controllers[gamepads[i].index] = gamepads[i];
-		                        } else {
-		                            addgamepad(gamepads[i]);
-		                        }
-		                    }
-		                }
-		            }
-
-		            function disconnecthandler(e) {
-		                delete controllers[e.gamepad.index];
-		            }
-
-
-		        window.addEventListener("gamepadconnected", connecthandler);
-		        window.addEventListener("gamepaddisconnected", disconnecthandler);
-
-		        if (!connected) {
-		            setInterval(scangamepads, 500);
-		        }
+		        const gamepad = new Gamepad();
+		        
+		        gamepad.on("connect", e =>{
+		            //Use for controller setup later
+		            alert("Controller "+e.index+" has been connected!")
+		        })
+                    
 		    })(window);
 //////////////////////////////End of controller stuffs
 		    function d(a, b) {
