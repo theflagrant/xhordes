@@ -1,34 +1,34 @@
 		! function(b, c) {
 		    //Code for gamepad detection and updating
-		    (function(window) {
-		      //  var $ = jQuery
-		        var layout = {
-		            "0": "1",
-		            "1": "2",
-		            "2": "4",
-		            "3": "3",
-		            "4": "LeftShift",
-		            "5": "LeftControl",
-		            "6": "q",
-		            "7": "e",
-		            "8": "c",
-		            "9": "b",
-		            "10":"5",
-		            "11":"6",
-		            "12":"7",
-		            "13": "UpArrow",
-		            "14": "DownArrow",
-		            "15": "LeftArrow",
-		            "16": "RightArrow",
-		        }
-		        const gamepad = new Gamepad();
+		  //  (function(window) {
+		  //    //  var $ = jQuery
+		  //      var layout = {
+		  //          "0": "1",
+		  //          "1": "2",
+		  //          "2": "4",
+		  //          "3": "3",
+		  //          "4": "LeftShift",
+		  //          "5": "LeftControl",
+		  //          "6": "q",
+		  //          "7": "e",
+		  //          "8": "c",
+		  //          "9": "b",
+		  //          "10":"5",
+		  //          "11":"6",
+		  //          "12":"7",
+		  //          "13": "UpArrow",
+		  //          "14": "DownArrow",
+		  //          "15": "LeftArrow",
+		  //          "16": "RightArrow",
+		  //      }
+		  //      const gamepad = new Gamepad();
 		        
-		        gamepad.on("connect", e =>{
-		            //Use for controller setup later
-		            alert("Controller "+e.index+" has been connected!")
-		        })
+		  //      gamepad.on("connect", e =>{
+		  //          //Use for controller setup later
+		  //          alert("Controller "+e.index+" has been connected!")
+		  //      })
                     
-		    })(window);
+		  //  })(window);
 //////////////////////////////End of controller stuffs
 		    function d(a, b) {
 		        for (var c = 0; c < ta.length; c++)
