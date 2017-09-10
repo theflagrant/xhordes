@@ -19686,7 +19686,7 @@
 						slot: "weapon",
 						type: "sword",
 						rotatedSprite: !0,
-						name: ["Wooden Sword", "Rusty Ironsword", "Troll Blade", "Broadsword ", "Longsword", "Carved Bonesword", "Greatsword", "Ghastly Scimitar", "Nullfire Sword", "Knight's Greatsword", "King's Glaive", "Void Blade", "ZerstÃ¶rer", "Hearteater", "Demonedge", "Excalibur", "Harbinger"],
+						name: ["Wooden Sword", "Rusty Ironsword", "Troll Blade", "Broadsword ", "Longsword", "Carved Bonesword", "Greatsword", "Ghastly Scimitar", "Nullfire Sword", "Knight's Greatsword", "King's Glaive", "Void Blade", "Zerstörer", "Hearteater", "Demonedge", "Excalibur", "Harbinger"],
 						drop: 1,
 						class: ["warrior"],
 						lvl: [1, 3, 9, 15, 21, 28, 34, 40, 46, 52, 58, 64, 70, 76, 82, 88, 94],
@@ -20942,8 +20942,8 @@
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 							//b is the item variable
-							var swords = ["Wooden Sword","Rusty Ironsword", "Troll Blade", "Broadsword ", "Longsword", "Carved Bonesword", "Greatsword", "Ghastly Scimitar", "Nullfire Sword", "Knight's Greatsword", "King's Glaive", "Void Blade", "Zerstörer", "ZerstÃ¶rer","Hearteater", "Demonedge", "Excalibur", "Harbinger"]
-							var swordmaxdmg = ["4-6","5-8","9-14","12-19","16-25","21-32","24-38","28-43","32-49","36-55","40-61","43-66","47-72","51-78", 51-78", "55-84","58-89","62-95"]
+							var swords = ["Wooden Sword","Rusty Ironsword", "Troll Blade", "Broadsword ", "Longsword", "Carved Bonesword", "Greatsword", "Ghastly Scimitar", "Nullfire Sword", "Knight's Greatsword", "King's Glaive", "Void Blade", "Zerstörer","Hearteater", "Demonedge", "Excalibur", "Harbinger"]
+							var swordmaxdmg = ["4-6","5-8","9-14","12-19","16-25","21-32","24-38","28-43","32-49","36-55","40-61","43-66","47-72","51-78", "55-84","58-89","62-95"]
 							var swordcrit = ["2.1","2.4","3.1","3.8","4.5","5.4","6.1","6.8","7.5","8.2","9","9.7","10.4","11.1","11.1", "11.8","12.6","13.3"]
 							var talismans = ["Smelly Talisman", "Guided Talisman", "Ocean Talisman", "Qui'ton", "Dimension Talisman"]
 							var talimp = ["11", "35", "59", "83", "107"]
